@@ -46,7 +46,7 @@ With [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
 use {
-  "yourname/pomatia.nvim",
+  "aliqyan-21/pomatia.nvim",
   config = function()
     require("pomatia").setup({})
     vim.cmd.colorscheme("pomatia")
@@ -115,7 +115,7 @@ require("pomatia").setup({
 
 ## TODO
 I have tried to keep the implementation as minimal as possible, making it fully functional.
-But some important things will be added soon such as caching and more plugins support.
+But some important things will be added soon such as more plugins support!
 
 ---
 
