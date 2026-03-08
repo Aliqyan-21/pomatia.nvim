@@ -17,10 +17,12 @@ The palette is untouched. The CRT soul is intact. *And if you think saturated co
 
 ## Features
 
-- **Faithful palette**: Every color is preserved from the original evening.vim. Salmon constants, periwinkle comments, phosphor green types, neon yellow keywords. It looks old because old was correct.
+- **Faithful palette**: Every color is preserved from the original evening.vim. Salmon constants, periwinkle comments, phosphor green types, neon yellow keywords.
+I wanted this old aesthetics once in a while.
 - **Treesitter support**: Full `@capture` group coverage including LSP semantic tokens.
-- **Plugin support**: Telescope, gitsigns, nvim-cmp, nvim-tree, which-key, indent-blankline, mini.nvim.
-- **Transparent background**: Let your terminal or compositor show through.
+- **Plugin support**: Telescope, gitsigns, nvim-cmp, etc.
+- **Highlight cache**: Computed highlights are serialized to disk on first load and applied directly on every subsequent startup — zero recomputation, zero module traversal.
+- **Transparent background**: Could enable transparency
 - **Configurable**: Italic comments, bold keywords, diagnostic underline style, and per-group overrides.
 
 ---
@@ -75,6 +77,9 @@ require("pomatia").setup({
 
   -- Diagnostic underline style: "straight" or "curl"
   underline_diagnostics = "straight",
+
+  -- enable caching of theme for fast load up
+  caching = true,
 
   -- Override any highlight group after everything else is applied.
   overrides = {},
