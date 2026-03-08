@@ -2,7 +2,7 @@ local M = {}
 
 M.colors = {
   -- backgrounds --
-  bg         = "#333333",
+  bg         = "#2b2b2b",
   bg_dark    = "#282828",
   bg_dim     = "#3d3d3d",
   bg_hl      = "#666666",
