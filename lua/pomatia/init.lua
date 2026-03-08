@@ -1,9 +1,9 @@
-local M = {}
+local M       = {}
 
-local config   = require("pomatia.config")
-local palette  = require("pomatia.palette")
+local config  = require("pomatia.config")
+local palette = require("pomatia.palette")
 
-local groups = {
+local groups  = {
   require("pomatia.groups.base"),
   require("pomatia.groups.treesitter"),
   require("pomatia.groups.plugins"),
