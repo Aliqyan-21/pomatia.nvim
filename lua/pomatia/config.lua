@@ -8,6 +8,7 @@ M.defaults = {
   dim_inactive_wins     = false,
   overrides             = {},
   underline_diagnostics = "straight",
+  caching               = true,
 }
 
 M.options = {}

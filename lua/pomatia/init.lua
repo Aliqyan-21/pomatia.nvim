@@ -1,9 +1,10 @@
-local M       = {}
+local M             = {}
 
-local config  = require("pomatia.config")
-local palette = require("pomatia.palette")
+local config        = require("pomatia.config")
+local palette       = require("pomatia.palette")
+local cache         = require("pomatia.cache")
 
-local groups  = {
+local group_modules = {
   require("pomatia.groups.base"),
   require("pomatia.groups.treesitter"),
   require("pomatia.groups.plugins"),
@@ -17,6 +18,16 @@ local function apply_highlights(specs)
       vim.api.nvim_set_hl(0, group, spec)
     end
   end
+end
+
+local function build_highlights(c, opts)
+  local all = {}
+  for _, mod in ipairs(group_modules) do
+    for group, spec in pairs(mod.get(c, opts)) do
+      all[group] = spec
+    end
+  end
+  return all
 end
 
 local function set_terminal_colors(c)
@@ -48,25 +59,44 @@ function M.load()
     opts = config.defaults
   end
 
-  local c = palette.colors
-
   if vim.g.colors_name then
     vim.cmd("hi clear")
   end
   vim.opt.background = "dark"
-  vim.g.colors_name = "pomatia"
+  vim.g.colors_name  = "pomatia"
 
-  for _, mod in ipairs(groups) do
-    apply_highlights(mod.get(c, opts))
+  local specs
+
+  if opts.caching then
+    specs = cache.load(opts) -- specs from cache if caching configured
+
+    if not specs then
+      specs = build_highlights(palette.colors, opts)
+      cache.save(opts, specs)
+    end
+  else
+    specs = build_highlights(palette.colors, opts)
   end
+
+  apply_highlights(specs)
 
   if opts.overrides and not vim.tbl_isempty(opts.overrides) then
     apply_highlights(opts.overrides)
   end
 
   if opts.terminal_colors then
-    set_terminal_colors(c)
+    set_terminal_colors(palette.colors)
   end
 end
+
+function M.clear_cache()
+  cache.clear()
+  M.load()
+end
+
+-- function ':PomatiaClearCache' for user
+vim.api.nvim_create_user_command("PomatiaClearCache", function()
+  require("pomatia").clear_cache()
+end, { desc = "Clear pomatia.nvim highlight cache and reload" })
 
 return M
