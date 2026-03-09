@@ -1,14 +1,8 @@
-local M             = {}
+local M       = {}
 
-local config        = require("pomatia.config")
-local palette       = require("pomatia.palette")
-local cache         = require("pomatia.cache")
-
-local group_modules = {
-  require("pomatia.groups.base"),
-  require("pomatia.groups.treesitter"),
-  require("pomatia.groups.plugins"),
-}
+local config  = require("pomatia.config")
+local palette = require("pomatia.palette")
+local cache   = require("pomatia.cache")
 
 local function apply_highlights(specs)
   for group, spec in pairs(specs) do
@@ -22,7 +16,11 @@ end
 
 local function build_highlights(c, opts)
   local all = {}
-  for _, mod in ipairs(group_modules) do
+  for _, mod in ipairs({
+    require("pomatia.groups.base"),
+    require("pomatia.groups.treesitter"),
+    require("pomatia.groups.plugins"),
+  }) do
     for group, spec in pairs(mod.get(c, opts)) do
       all[group] = spec
     end
