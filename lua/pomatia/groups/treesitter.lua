@@ -71,7 +71,7 @@ function M.get(c, opts)
     ["@comment.documentation"]       = { fg = c.blue, italic = opts.italic_comments },
     ["@comment.error"]               = { fg = c.red },
     ["@comment.warning"]             = { fg = c.gold },
-    ["@comment.todo"]                = { fg = c.gold, bg = "#0000ff", bold = true },
+    ["@comment.todo"]                = { fg = c.gold, bg = c.blue, bold = true },
     ["@comment.note"]                = { fg = c.cyan, bold = true },
 
     ["@markup.strong"]               = { bold = true },
