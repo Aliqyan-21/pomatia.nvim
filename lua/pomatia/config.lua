@@ -6,9 +6,10 @@ M.defaults = {
   italic_comments       = true,
   bold_keywords         = true,
   dim_inactive_wins     = false,
-  overrides             = {},
   underline_diagnostics = "straight",
   caching               = true,
+  listchar_bg           = true,
+  overrides             = {},
 }
 
 M.options = {}

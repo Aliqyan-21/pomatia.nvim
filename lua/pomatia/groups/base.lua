@@ -58,7 +58,7 @@ function M.get(c, opts)
     EndOfBuffer              = { fg = "#add8e6", bg = opts.transparent and c.none or "#4d4d4d" },
     NonText                  = { fg = "#add8e6", bg = opts.transparent and c.none or "#4d4d4d" },
     SpecialKey               = { fg = c.cyan },
-    Whitespace               = { fg = "#555555" },
+    Whitespace               = { fg = c.fg_dark, bg = opts.listchar_bg and c.bg_hl or c.none },
 
     DiagnosticError          = { fg = c.error },
     DiagnosticWarn           = { fg = c.warn },

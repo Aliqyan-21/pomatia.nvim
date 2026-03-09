@@ -81,8 +81,13 @@ require("pomatia").setup({
   -- enable caching of theme for fast load up
   caching = true,
 
+  -- enable/disable the background of the
+  -- list chars (so not related to transparency)
+  listchar_bg = true,
+
   -- Override any highlight group after everything else is applied.
   overrides = {},
+
 })
 ```
 
