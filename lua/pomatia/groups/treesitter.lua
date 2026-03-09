@@ -11,7 +11,7 @@ function M.get(c, opts)
     ["@constant.builtin"]            = { fg = c.pink, bold = true },
     ["@constant.macro"]              = { fg = c.magenta },
 
-    ["@module"]                      = { fg = c.cyan },
+    ["@module"]                      = { fg = c.teal },
     ["@module.builtin"]              = { fg = c.cyan, bold = true },
     ["@label"]                       = { fg = c.yellow },
 
@@ -105,7 +105,7 @@ function M.get(c, opts)
     ["@lsp.type.keyword"]            = { fg = c.yellow, bold = opts.bold_keywords },
     ["@lsp.type.macro"]              = { fg = c.magenta },
     ["@lsp.type.method"]             = { fg = c.cyan },
-    ["@lsp.type.namespace"]          = { fg = c.cyan },
+    ["@lsp.type.namespace"]          = { fg = c.teal },
     ["@lsp.type.number"]             = { fg = c.pink },
     ["@lsp.type.operator"]           = { fg = c.yellow },
     ["@lsp.type.parameter"]          = { fg = c.fg_dim },
