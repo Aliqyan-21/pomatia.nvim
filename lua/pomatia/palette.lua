@@ -18,21 +18,22 @@ M.colors = {
   -- core colors --
   cyan       = "#00ffff",
   green      = "#00ff00",
-  yellow     = "#ffff60",  -- statement yellow (softer than pure #ffff00)
-  gold       = "#ffff00",  -- raw yellow for line numbers, search
-  magenta    = "#ff80ff",  -- preproc pink
-  orange     = "#ffa500",  -- special
+  yellow     = "#ffff60", -- statement yellow (softer than pure #ffff00)
+  gold       = "#ffff00", -- raw yellow for line numbers, search
+  magenta    = "#ff80ff", -- preproc pink
+  orange     = "#ffa500", -- special
   red        = "#ff0000",
-  blue       = "#80a0ff",  -- periwinkle comments
-  pink       = "#ffa0a0",  -- constants/strings (salmon)
+  blue       = "#80a0ff", -- periwinkle comments
+  pink       = "#ffa0a0", -- constants/strings (salmon)
   teal       = "#00cdcd",
 
   -- UI --
-  dark_red   = "#8b0000",  -- color column
+  dark_red   = "#8b0000", -- color column
   dark_blue  = "#00008b",
   dark_cyan  = "#008b8b",
   dark_green = "#2e8b57",
   crimson    = "#cd0000",
+  dark_mag   = "#8b008b",
 
   -- git diff --
   diff_add   = "#5f875f",
