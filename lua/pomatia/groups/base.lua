@@ -10,7 +10,7 @@ function M.get(c, opts)
     NormalNC                 = { fg = opts.dim_inactive_wins and c.fg_dark or c.fg, bg = bg_normal },
 
     ColorColumn              = { bg = c.dark_red },
-    Conceal                  = { fg = "#666666" },
+    Conceal                  = { fg = c.bg_hl },
     CursorLine               = { bg = c.bg_hl },
     CursorColumn             = { link = "CursorLine" },
     CursorLineNr             = { fg = c.gold, bg = c.bg_hl },
@@ -38,8 +38,8 @@ function M.get(c, opts)
 
     Pmenu                    = { fg = c.fg, bg = c.bg_popup },
     PmenuSel                 = { fg = c.black, bg = c.fg_dark },
-    PmenuMatch               = { fg = "#ff80ff", bg = c.bg_popup },
-    PmenuMatchSel            = { fg = "#8b008b", bg = c.fg_dark },
+    PmenuMatch               = { fg = c.magenta, bg = c.bg_popup },
+    PmenuMatchSel            = { fg = c.dark_mag, bg = c.fg_dark },
     PmenuSbar                = { bg = c.bg_popup },
     PmenuThumb               = { bg = c.fg },
 
@@ -53,10 +53,10 @@ function M.get(c, opts)
 
     MatchParen               = { bg = c.dark_cyan },
     WildMenu                 = { fg = c.black, bg = c.gold, bold = true },
-    QuickFixLine             = { fg = c.fg, bg = "#8b008b" },
+    QuickFixLine             = { fg = c.fg, bg = c.dark_mag },
 
-    EndOfBuffer              = { fg = "#add8e6", bg = opts.transparent and c.none or "#4d4d4d" },
-    NonText                  = { fg = "#add8e6", bg = opts.transparent and c.none or "#4d4d4d" },
+    EndOfBuffer              = { fg = c.eob, bg = opts.transparent and c.none or c.bg_popup },
+    NonText                  = { fg = c.eob, bg = opts.transparent and c.none or c.bg_popup },
     SpecialKey               = { fg = c.cyan },
     Whitespace               = { fg = c.fg_dark, bg = opts.listchar_bg and c.bg_hl or c.none },
 
@@ -123,7 +123,7 @@ function M.get(c, opts)
     Underlined               = { fg = c.blue, underline = true },
     Ignore                   = { fg = c.bg },
     Error                    = { fg = c.red, bg = c.fg, reverse = true },
-    Todo                     = { fg = c.gold, bg = "#0000ff", reverse = true },
+    Todo                     = { fg = c.gold, bg = c.blue, reverse = true },
 
     ErrorMsg                 = { fg = c.fg, bg = c.red },
     WarningMsg               = { fg = c.red },
@@ -138,7 +138,7 @@ function M.get(c, opts)
     lCursor                  = { link = "Cursor" },
 
     debugBreakpoint          = { fg = c.dark_blue, bg = c.red },
-    debugPC                  = { fg = c.dark_blue, bg = "#0000ff" },
+    debugPC                  = { fg = c.dark_blue, bg = c.blue },
   }
 end
 
