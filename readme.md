@@ -1,24 +1,48 @@
 # pomatia.nvim
 
-Have you ever fired up an old terminal and felt something was right about it? The green on black.
-The cyan identifiers. The way yellow keywords practically buzzed off the screen.
-No subtlety, no muted pastels — just raw phosphor light against dark glass, telling you exactly what the machine was doing.
+`pomatia.nvim` is a collection of colorschemes, inspired by different things in life and retro colorschemes.
 
-**pomatia.nvim** is a port of `evening.vim`, one of the oldest colorschemes in Vim's history, originally written by Bram Moolenaar.
-It is brought into modern Neovim with full treesitter, telescope, and gitsigns support.
-The palette is untouched. The CRT soul is intact. *And if you think saturated colors are a sin, this is not the theme for you.*
+There are different variants, where the **default** pomatia variant is inspired by the evening.vim,
+one of the oldest colorschemes in Vim's history, originally written by Bram Moolenaar himself.
 
+## Preview
+
+### 1. default
+
+<details>
+<summary>click</summary>
 
 |           |           |
 |-----------|-----------|
 | ![preview](assets/pomatia.png) | ![preview](assets/pomatia2.png) |
 
+</details>
+
+### 2. soft (softer version of default)
+
+<details>
+<summary>click</summary>
+
+|           |           |
+|-----------|-----------|
+| ![preview](assets/soft1.png) | ![preview](assets/soft2.png) |
+
+</details>
+
+### 3. noble (inspired by vim-orbital)
+<details>
+<summary>click</summary>
+
+|           |           |
+|-----------|-----------|
+| ![preview](assets/noble1.png) | ![preview](assets/noble2.png) |
+
+</details>
+
 ---
 
 ## Features
 
-- **Faithful palette**: Every color is preserved from the original evening.vim. Salmon constants, periwinkle comments, phosphor green types, neon yellow keywords.
-I wanted this old aesthetics once in a while.
 - **Treesitter support**: Full `@capture` group coverage including LSP semantic tokens.
 - **Plugin support**: Telescope, gitsigns, nvim-cmp, etc.
 - **Highlight cache**: Computed highlights are serialized to disk on first load and applied directly on every subsequent startup — zero recomputation, zero module traversal.
@@ -60,6 +84,9 @@ use {
 
 ```lua
 require("pomatia").setup({
+  -- set variant ("default" if variant not set)
+  variant = "default",
+
   -- Transparency enable
   transparent = false,
 
@@ -126,5 +153,7 @@ But some important things will be added soon such as more plugins support!
 
 ## Credits
 
-Original **evening.vim** by Bram Moolenaar, maintained by Steven Vertigan.
+**evening.vim** by Bram Moolenaar, maintained by Steven Vertigan.
 Source: https://github.com/vim/colorschemes/tree/master/colors/evening.vim
+
+**orbital.vim**: Source: https://github.com/fcpg/vim-orbital
