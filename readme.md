@@ -85,7 +85,7 @@ use {
 ```lua
 require("pomatia").setup({
   -- set variant ("default" if variant not set)
-  variant = "default",
+  variant = "default", -- "default" | "soft" | "noble"
 
   -- Transparency enable
   transparent = false,
