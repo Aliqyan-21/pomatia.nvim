@@ -1,8 +1,7 @@
-local M       = {}
+local M      = {}
 
-local config  = require("pomatia.config")
-local palette = require("pomatia.palette")
-local cache   = require("pomatia.cache")
+local config = require("pomatia.config")
+local cache  = require("pomatia.cache")
 
 local function apply_highlights(specs)
   for group, spec in pairs(specs) do
@@ -57,23 +56,25 @@ function M.load()
     opts = config.defaults
   end
 
-  if vim.g.colors_name then
-    vim.cmd("hi clear")
+  vim.cmd("hi clear")
+  if vim.fn.exists("syntax_on") == 1 then
+    vim.cmd("syntax reset")
   end
   vim.opt.background = "dark"
   vim.g.colors_name  = "pomatia"
 
+  local c            = require("pomatia.palette").get(opts.variant or "default");
   local specs
 
   if opts.caching then
     specs = cache.load(opts) -- specs from cache if caching configured
 
     if not specs then
-      specs = build_highlights(palette.colors, opts)
+      specs = build_highlights(c, opts)
       cache.save(opts, specs)
     end
   else
-    specs = build_highlights(palette.colors, opts)
+    specs = build_highlights(c, opts)
   end
 
   apply_highlights(specs)
@@ -83,7 +84,7 @@ function M.load()
   end
 
   if opts.terminal_colors then
-    set_terminal_colors(palette.colors)
+    set_terminal_colors(c)
   end
 end
 

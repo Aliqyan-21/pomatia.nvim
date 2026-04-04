@@ -1,6 +1,7 @@
 local M = {}
 
 M.defaults = {
+  variant               = "default",
   transparent           = false,
   terminal_colors       = true,
   italic_comments       = true,
