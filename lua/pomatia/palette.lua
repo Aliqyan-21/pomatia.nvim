@@ -66,6 +66,138 @@ local palettes = {
     br_white   = "#ffffff",
     none       = "NONE",
   },
+  -- a softer variant to pomatia variant="default"
+  soft = {
+    -- backgrounds --
+    bg         = "#2d2a2e",
+    bg_dark    = "#27252a",
+    bg_dim     = "#3a3740",
+    bg_hl      = "#5a5660",
+    bg_popup   = "#423f4a",
+    bg_alt     = "#3f3c47",
+
+    -- foregrounds --
+    fg         = "#f8f8f2",
+    fg_dim     = "#cfcfcf",
+    fg_dark    = "#b0b0b0",
+    fg_muted   = "#8a8a8a",
+
+    -- core colors --
+    cyan       = "#66d9ef",
+    green      = "#a9dc76",
+    yellow     = "#e5c07b",
+    gold       = "#d4b44a",
+    magenta    = "#c678dd",
+    orange     = "#fc9867",
+    red        = "#ff6188",
+    blue       = "#82aaff",
+    pink       = "#e6a0b0",
+    teal       = "#5eccd8",
+
+    -- UI --
+    dark_red   = "#7a3040",
+    dark_blue  = "#1a3a6b",
+    dark_cyan  = "#1a5f6b",
+    dark_green = "#2a6b42",
+    crimson    = "#b02040",
+    dark_mag   = "#6b2080",
+
+    -- git diff --
+    diff_add   = "#3a5f3a",
+    diff_chg   = "#3a5070",
+    diff_del   = "#6b3a6b",
+    diff_txt   = "#b8b8b8",
+
+    -- diagnostic --
+    error      = "#ff6188",
+    warn       = "#e5c07b",
+    info       = "#82aaff",
+    hint       = "#66d9ef",
+
+    -- gitsigns plug --
+    git_add    = "#a9dc76",
+    git_change = "#e5c07b",
+    git_delete = "#ff6188",
+
+    -- terminal --
+    black      = "#000000",
+    br_black   = "#7f7f7f",
+    br_red     = "#ff6188",
+    br_green   = "#a9dc76",
+    br_yellow  = "#e5c07b",
+    br_blue    = "#5c5cff",
+    br_magenta = "#c678dd",
+    br_cyan    = "#66d9ef",
+    white      = "#e5e5e5",
+    br_white   = "#ffffff",
+    none       = "NONE",
+  },
+  -- inspired by vim-orbital
+  noble = {
+    -- backgrounds --
+    bg         = "#0e1628",
+    bg_dark    = "#0a1020",
+    bg_dim     = "#1a2540",
+    bg_hl      = "#2a3a5a",
+    bg_popup   = "#162035",
+    bg_alt     = "#1e2d4a",
+
+    -- foregrounds --
+    fg         = "#ffd7af",
+    fg_dim     = "#d7af87",
+    fg_dark    = "#af875f",
+    fg_muted   = "#7a6a50",
+
+    -- core colors --
+    cyan       = "#5fafff",
+    green      = "#87afd7",
+    yellow     = "#d4a847",
+    gold       = "#c9922a",
+    magenta    = "#87afd7",
+    orange     = "#d7af87",
+    red        = "#d75f5f",
+    blue       = "#5f87af",
+    pink       = "#ffd7af",
+    teal       = "#5f87d7",
+
+    -- UI --
+    dark_red   = "#5f0000",
+    dark_blue  = "#00005f",
+    dark_cyan  = "#005f87",
+    dark_green = "#005f5f",
+    crimson    = "#af0000",
+    dark_mag   = "#5f005f",
+
+    -- git diff --
+    diff_add   = "#1a3a2a",
+    diff_chg   = "#1a2a4a",
+    diff_del   = "#3a1a1a",
+    diff_txt   = "#d7af87",
+
+    -- diagnostic --
+    error      = "#d75f5f",
+    warn       = "#d4a847",
+    info       = "#5f87af",
+    hint       = "#5fafff",
+
+    -- gitsigns plug --
+    git_add    = "#5faf87",
+    git_change = "#d4a847",
+    git_delete = "#d75f5f",
+
+    -- terminal --
+    black      = "#000000",
+    br_black   = "#7f7f7f",
+    br_red     = "#d75f5f",
+    br_green   = "#87afd7",
+    br_yellow  = "#d4a847",
+    br_blue    = "#0087d7",
+    br_magenta = "#5f87d7",
+    br_cyan    = "#5fafff",
+    white      = "#ffd7af",
+    br_white   = "#e4e4e4",
+    none       = "NONE",
+  },
 }
 
 function M.get(variant)
