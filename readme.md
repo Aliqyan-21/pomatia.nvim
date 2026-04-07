@@ -176,8 +176,9 @@ require("pomatia").setup({
 - [x] **telescope.nvim**
 - [x] **gitsigns.nvim**
 - [x] **nvim-cmp**
-- [ ] **which-key.nvim**
-- [ ] **mini.nvim**
+- [x] **which-key.nvim**
+- [x] **mini.nvim**
+> - more could be added...
 
 ---
 
