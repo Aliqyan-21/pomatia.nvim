@@ -83,9 +83,9 @@ function M.get(c, opts)
     Removed                  = { link = "WarningMsg" },
     Changed                  = { link = "DiffChange" },
 
-    Comment                  = { fg = c.blue, italic = opts.italic_comments },
+    Comment                  = { fg = c.comment, italic = opts.italic_comments },
     Constant                 = { fg = c.pink },
-    String                   = { link = "Constant" },
+    String                   = { fg = c.blue, bg = opts.variant == "noir" and c.bg_alt or nil },
     Character                = { link = "Constant" },
     Number                   = { link = "Constant" },
     Boolean                  = { link = "Constant" },

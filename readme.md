@@ -1,13 +1,15 @@
 # pomatia.nvim
 
-`pomatia.nvim` is a collection of colorschemes, inspired by different things in life and retro colorschemes.
-
-There are different variants, where the **default** pomatia variant is inspired by the evening.vim,
-one of the oldest colorschemes in Vim's history, originally written by Bram Moolenaar himself.
+`pomatia.nvim` is not a single colorscheme. It is a collection of carefully considered palettes, each one built
+from a different philosophy, a different source of inspiration.
+Then default is a direct port of evening.vim one of the oldest colorschemes
+in Vim's history, written by Bram Moolenaar himself.
 
 ## Preview
 
 ### 1. default
+Pure primaries on a neutral gray. Cyan functions, green types, yellow keywords, salmon
+constants. The retro saturated colors and CRT aesthetics
 
 <details>
 <summary>click</summary>
@@ -19,6 +21,9 @@ one of the oldest colorschemes in Vim's history, originally written by Bram Mool
 </details>
 
 ### 2. soft (softer version of default)
+Same color families, pulled back from the edge.
+Amber instead of raw yellow, sage instead of nuclear green.
+For when eyes are tired or something...
 
 <details>
 <summary>click</summary>
@@ -30,12 +35,31 @@ one of the oldest colorschemes in Vim's history, originally written by Bram Mool
 </details>
 
 ### 3. noble (inspired by vim-orbital)
+A navy background so dark it feels like looking out a cockpit window. Foreground text in
+warm cream. Syntax rendered entirely in blues - cold, structural, orbital. Keywords glow
+amber, like old terminal phosphor. The contrast between cold and warm is the whole point.
+
 <details>
 <summary>click</summary>
 
 |           |           |
 |-----------|-----------|
 | ![preview](assets/noble1.png) | ![preview](assets/noble2.png) |
+
+</details>
+
+### 4. lucid (inspired by vim-colors-lucid)
+dark background. Syntax in genuinely different hue families - emerald turquoise for
+keywords, pale sky for functions, steel blue for types, lime green for strings, hot pink
+for preprocessor. Nothing shares a hue family with anything else. The result is the
+unmistakable clarity.
+
+<details>
+<summary>click</summary>
+
+|           |           |
+|-----------|-----------|
+| ![preview](assets/lucid1.png) | ![preview](assets/lucid2.png) |
 
 </details>
 
@@ -85,7 +109,7 @@ use {
 ```lua
 require("pomatia").setup({
   -- set variant ("default" if variant not set)
-  variant = "default", -- "default" | "soft" | "noble"
+  variant = "default", -- "default" | "soft" | "noble" | "lucid"
 
   -- Transparency enable
   transparent = false,
@@ -157,3 +181,7 @@ But some important things will be added soon such as more plugins support!
 Source: https://github.com/vim/colorschemes/tree/master/colors/evening.vim
 
 **orbital.vim**: Source: https://github.com/fcpg/vim-orbital
+
+**vim-256noir**: Source: https://github.com/andreasvc/vim-256noir
+
+**vim-colors-lucid**: Source: https://github.com/cseelus/vim-colors-lucid

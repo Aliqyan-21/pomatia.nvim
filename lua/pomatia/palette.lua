@@ -27,6 +27,7 @@ local palettes = {
     blue       = "#80a0ff", -- periwinkle comments
     pink       = "#ffa0a0", -- constants/strings (salmon)
     teal       = "#00cdcd",
+    comment    = "#80a0ff",
 
     -- UI --
     dark_red   = "#8b0000", -- color column
@@ -93,6 +94,7 @@ local palettes = {
     blue       = "#82aaff",
     pink       = "#e6a0b0",
     teal       = "#5eccd8",
+    comment    = "#82aaff",
 
     -- UI --
     dark_red   = "#7a3040",
@@ -159,6 +161,7 @@ local palettes = {
     blue       = "#5f87af",
     pink       = "#ffd7af",
     teal       = "#5f87d7",
+    comment    = "#6a7a6a",
 
     -- UI --
     dark_red   = "#5f0000",
@@ -196,6 +199,73 @@ local palettes = {
     br_cyan    = "#5fafff",
     white      = "#ffd7af",
     br_white   = "#e4e4e4",
+    none       = "NONE",
+  },
+  -- inspired by lucid.vim
+  lucid = {
+    -- backgrounds --
+    bg         = "#1a1a1a",
+    bg_dark    = "#111111",
+    bg_dim     = "#222222",
+    bg_hl      = "#2e2e2e",
+    bg_popup   = "#1e1e1e",
+    bg_alt     = "#1c1c1c",
+
+    -- foregrounds --
+    fg         = "#e4e0ed",
+    fg_dim     = "#beb8cc",
+    fg_dark    = "#847d91",
+    fg_muted   = "#534d5e",
+
+    -- core colors --
+    cyan       = "#79d8f0",
+    green      = "#6aaee0",
+    yellow     = "#3fd9a8",
+    gold       = "#2dba88",
+    magenta    = "#ee0099",
+    orange     = "#ee0099",
+    red        = "#ee2266",
+    blue       = "#d0ffc3",
+    pink       = "#3fd9a8",
+    teal       = "#99feff",
+    comment    = "#6e6880",
+
+    -- UI --
+    dark_red   = "#6b0044",
+    dark_blue  = "#1a1a40",
+    dark_cyan  = "#1a3a40",
+    dark_green = "#1a3a20",
+    crimson    = "#c0304a",
+    dark_mag   = "#3a1a50",
+
+    -- git diff --
+    diff_add   = "#1e3a1e",
+    diff_chg   = "#1e2a40",
+    diff_del   = "#3a1e28",
+    diff_txt   = "#beb8cc",
+
+    -- diagnostic --
+    error      = "#e03070",
+    warn       = "#fde9a2",
+    info       = "#83a8d1",
+    hint       = "#99feff",
+
+    -- gitsigns plug --
+    git_add    = "#3fc997",
+    git_change = "#fde9a2",
+    git_delete = "#e03070",
+
+    -- terminal --
+    black      = "#000000",
+    br_black   = "#7f7f7f",
+    br_red     = "#e03070",
+    br_green   = "#3fc997",
+    br_yellow  = "#fde9a2",
+    br_blue    = "#83a8d1",
+    br_magenta = "#db0088",
+    br_cyan    = "#99feff",
+    white      = "#e4e0ed",
+    br_white   = "#ffffff",
     none       = "NONE",
   },
 }
