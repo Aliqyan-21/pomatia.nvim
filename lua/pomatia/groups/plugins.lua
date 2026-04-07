@@ -60,6 +60,17 @@ function M.get(c, opts)
 
     IblIndent               = { fg = "#444444" },
     IblScope                = { fg = "#666666" },
+
+    -- which key --
+    WhichKey                = { fg = c.cyan },
+    WhichKeyGroup           = { fg = c.yellow },
+    WhichKeyDesc            = { fg = c.fg },
+    WhichKeySeperator       = { fg = c.fg_muted },
+    WhichKeyFloat           = { bg = opts.transparent and c.none or c.bg_popup },
+    WhichKeyBorder          = { fg = c.dark_cyan },
+
+    -- mini --
+    -- TODO: implement
   }
 end
 
