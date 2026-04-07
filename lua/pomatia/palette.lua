@@ -15,6 +15,7 @@ local palettes = {
     fg_dim     = "#d3d3d3",
     fg_dark    = "#bebebe",
     fg_muted   = "#999999",
+    eob        = "#d1e189",
 
     -- core colors --
     cyan       = "#00ffff",
@@ -82,6 +83,7 @@ local palettes = {
     fg_dim     = "#cfcfcf",
     fg_dark    = "#b0b0b0",
     fg_muted   = "#8a8a8a",
+    eob        = "#d1e189",
 
     -- core colors --
     cyan       = "#66d9ef",
@@ -149,6 +151,7 @@ local palettes = {
     fg_dim     = "#d7af87",
     fg_dark    = "#af875f",
     fg_muted   = "#7a6a50",
+    eob        = "#4169e1",
 
     -- core colors --
     cyan       = "#5fafff",
@@ -216,6 +219,7 @@ local palettes = {
     fg_dim     = "#beb8cc",
     fg_dark    = "#847d91",
     fg_muted   = "#534d5e",
+    eob        = "#8fbc8f",
 
     -- core colors --
     cyan       = "#79d8f0",
