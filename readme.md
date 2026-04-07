@@ -102,6 +102,18 @@ use {
 }
 ```
 
+With [vim.pack](https://echasnovski.com/blog/2026-03-13-a-guide-to-vim-pack):
+
+```lua
+vim.pack.add("https://github.com/aliqyan-21/pomatia.nvim")
+
+-- then in configuration:
+require('pomatia').setup {
+  variant = "default",
+}
+vim.cmd 'colorscheme pomatia'
+```
+
 ---
 
 ## Configuration
