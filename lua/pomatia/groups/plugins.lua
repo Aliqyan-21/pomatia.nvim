@@ -70,7 +70,14 @@ function M.get(c, opts)
     WhichKeyBorder          = { fg = c.dark_cyan },
 
     -- mini --
-    -- TODO: implement
+    MiniIndentscopeSymbol = { fg = c.dark_cyan },
+    MiniStatuslineModeNormal = { fg = c.black, bg = c.gold, bold = true },
+    MiniStatuslineModeInsert = { fg = c.black, bg = c.green, bold = true },
+    MiniStatuslineModeVisual = { fg = c.black, bg = c.magenta, bold = true },
+    MiniStatuslineModeReplace = { fg = c.black, bg = c.red, bold = true },
+    MiniStatuslineModeCommand= { fg = c.black, bg = c.cyan, bold = true },
+    MiniStatuslineFilename = { fg = c.fg, bg = c.bg_hl },
+    MiniStatuslineFileinfo = { fg = c.fg, bg = c.bg_hl },
   }
 end
 
